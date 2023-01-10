@@ -3,17 +3,12 @@ import { FaRegEdit } from "react-icons/fa";
 const Layout = ({ children }) => {
 
   return (
-    <section className="">
+    <section className="container mx-auto">
       <div className="lg:grid grid-cols-8 gap-4 mt-20">
         <div className="shadow-md w-full h-[100vh] col-span-2 p-3 lg:p-0 ">
-
           <div className="sticky top-0">
-
-
-
             {/* User Profile */}
             <div className="text-center   rounded-md shadow-xl border-0">
-
               <img className="w-28 h-28 lg:w-40 lg:h-40 mx-auto border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
               <h1 className="text-2xl  font-bold pt-5 lg:text-3xl">Aminul Islam Rakib</h1>
               <h1 className="text-xl  pt-3 lg:text-xl text-slate-400">Web Developer</h1>
