@@ -3,7 +3,7 @@ import { FaRegEdit } from "react-icons/fa";
 const Layout = ({ children }) => {
 
   return (
-    <section>
+    <section className="container mx-auto">
       <div className="lg:grid grid-cols-8 gap-4 mt-20">
         <div className="shadow-md w-full h-[100vh] col-span-2 p-3 lg:p-0 ">
 
