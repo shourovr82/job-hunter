@@ -3,7 +3,7 @@ import { FaRegEdit } from "react-icons/fa";
 const Layout = ({ children }) => {
 
   return (
-    <section>
+    <section className="">
       <div className="lg:grid grid-cols-8 gap-4 mt-20">
         <div className="shadow-md w-full h-[100vh] col-span-2 p-3 lg:p-0 ">
 
@@ -92,70 +92,67 @@ const Layout = ({ children }) => {
         </div>
         <div className="col-span-4">
           {children}
-
         </div>
 
 
         <div className="shadow-md w-full col-span-2  ">
-          <h1 className="text-center">
 
-            <div className="bg-white p-3  rounded-md shadow-xl border-0">
+          <div className="bg-white p-3  rounded-md shadow-xl border-0">
 
-              <h1 className="font-bold text-center text-blue-600 lg:text-xl">Messages </h1>
+            <h1 className="font-bold text-center text-blue-600 lg:text-xl">Messages </h1>
 
 
-              {/* slot-1 */}
-              <div className="flex justify-between py-4 ">
-                <div className="flex">
-                  {/* Total Friends */}
-                  <img className="w-8 h-8 border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
-                  <p className="my-auto pl-4 text- font-semibold">Aminul Islam Rakib</p>
-                </div>
+            {/* slot-1 */}
+            <div className="flex justify-between py-4 ">
+              <div className="flex">
+                {/* Total Friends */}
+                <img className="w-8 h-8 border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
+                <p className="my-auto pl-4 text- font-semibold">Aminul Islam Rakib</p>
               </div>
-
-
-              {/* slot-2 */}
-              <div className="flex justify-between py-4 ">
-                <div className="flex">
-                  {/* Total Friends */}
-                  <img className="w-8 h-8 border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
-                  <p className="my-auto pl-4 text- font-semibold">Ashikur Rahman</p>
-                </div>
-              </div>
-
-
-              {/* slot-3 */}
-              <div className="flex justify-between py-4 ">
-                <div className="flex">
-                  {/* Total Friends */}
-                  <img className="w-8 h-8 border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
-                  <p className="my-auto pl-4 text- font-semibold">Kazi Rahat Rezwan</p>
-                </div>
-              </div>
-
-
-              {/* slot-4 */}
-              <div className="flex justify-between py-4 ">
-                <div className="flex">
-                  {/* Total Friends */}
-                  <img className="w-8 h-8 border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
-                  <p className="my-auto pl-4 text- font-semibold">Shafin</p>
-                </div>
-              </div>
-
-
-              {/* slot-5 */}
-              <div className="flex justify-between py-4 ">
-                <div className="flex">
-                  {/* Total Friends */}
-                  <img className="w-8 h-8 border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
-                  <p className="my-auto pl-4 text- font-semibold">Thadi Islam</p>
-                </div>
-              </div>
-
-
             </div>
-          </h1>
+
+
+            {/* slot-2 */}
+            <div className="flex justify-between py-4 ">
+              <div className="flex">
+                {/* Total Friends */}
+                <img className="w-8 h-8 border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
+                <p className="my-auto pl-4 text- font-semibold">Ashikur Rahman</p>
+              </div>
+            </div>
+
+
+            {/* slot-3 */}
+            <div className="flex justify-between py-4 ">
+              <div className="flex">
+                {/* Total Friends */}
+                <img className="w-8 h-8 border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
+                <p className="my-auto pl-4 text- font-semibold">Kazi Rahat Rezwan</p>
+              </div>
+            </div>
+
+
+            {/* slot-4 */}
+            <div className="flex justify-between py-4 ">
+              <div className="flex">
+                {/* Total Friends */}
+                <img className="w-8 h-8 border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
+                <p className="my-auto pl-4 text- font-semibold">Shafin</p>
+              </div>
+            </div>
+
+
+            {/* slot-5 */}
+            <div className="flex justify-between py-4 ">
+              <div className="flex">
+                {/* Total Friends */}
+                <img className="w-8 h-8 border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
+                <p className="my-auto pl-4 text- font-semibold">Thadi Islam</p>
+              </div>
+            </div>
+
+
+          </div>
         </div>
       </div>
     </section>

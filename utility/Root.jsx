@@ -4,9 +4,12 @@ import Layout from "../pages/Layout/Layout";
 
 const Root = ({ children }) => {
   return (
-    <div className="container mx-auto">
+    <div className=" mx-auto">
       <Header />
-      <Layout>{children}</Layout>
+      <div className="container mx-auto">
+
+        <Layout>{children}</Layout>
+      </div>
 
       {/* <Footer/> */}
     </div>
