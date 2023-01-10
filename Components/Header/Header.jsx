@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
-import { GoHome } from 'react-icons/fa';
-
+import React from 'react';
 
 const Header = () => {
-    const [openNav, setOpenNav] = useState(false);
-
-
     return (
         <div>
-            <h2>this is navbar 2</h2>
+            <h1>this is header / navbar page </h1>
+            <p>shafinur islam </p>
+            <p>again</p>
         </div>
     );
 };
