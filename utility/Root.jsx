@@ -4,7 +4,7 @@ import Layout from "../pages/Layout/Layout";
 
 const Root = ({ children }) => {
   return (
-    <div className=" mx-auto">
+    <div className=" mx-auto wiwaxia">
       <Header />
       <div className="container mx-auto">
 
