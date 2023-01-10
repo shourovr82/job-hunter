@@ -14,7 +14,7 @@ const index = () => {
             />
             <div>
               <h3 className="text-2xl font-bold text-gray-800">
-                Junior UI/UX Designer
+                shafin UI/UX Designer
               </h3>
               <h6 className="text-gray-500 text-lg">Slack Technologies, LLC</h6>
             </div>
