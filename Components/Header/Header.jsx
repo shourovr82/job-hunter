@@ -15,7 +15,7 @@ const Header = () => {
     return (
 
 
-        <nav className="w-full border-b-[1px] border-[#3086b818]  ">
+        <nav className="w-full border-b-[1px] main-navbar shadow-[#3086b827] shadow-md  ">
             <div className="justify-between  mx-auto container  md:items-center md:flex ">
                 <div>
                     <div className="flex items-center justify-between  md:block">
@@ -66,31 +66,31 @@ const Header = () => {
                 {/*  nav menu for large devices */}
                 <div className=''>
                     <div
-                        className={`flex-1 justify-self-center  pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'
+                        className={`flex-1 justify-self-center  pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block mobile-navbar' : 'hidden'
                             }`}
                     >
-                        <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <li className="text-[#423e3d] font-mono font-semibold text-[17px]">
-                                <Link className='flex  px-3 rounded-lg py-2 nav-menu-title bg-[#23bfef33]  items-center gap-3' href="/">
+                        <ul className="items-center   flex flex-col md:flex-row justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                            <li className="text-[#423e3d]  font-mono font-semibold xl:text-[14px] 2xl:text-lg">
+                                <Link className='flex  px-3 rounded-lg py-2   items-center gap-3' href="/">
                                     <p>Home</p>
                                     <span className='text-lg'><GoHome /></span>
                                 </Link>
                             </li>
-                            <li className="text-[#423e3d] font-mono font-semibold text-[17px]">
-                                <Link className='flex items-center gap-3' href="/jobs">
+                            <li className="text-[#423e3d] w-80 md:w-40 font-mono font-semibold xl:text-[14px] 2xl:text-lg">
+                                <Link className=' flex  justify-center px-3 rounded-lg py-2 nav-menu-title items-center gap-3' href="/jobs">
                                     <p>Find Work</p>
                                     <span className='text-lg'> <MdOutlineWork /></span>
 
                                 </Link>
                             </li>
-                            <li className="text-[#423e3d] font-mono font-semibold text-[17px]">
+                            <li className="text-[#423e3d] font-mono font-semibold xl:text-[14px] 2xl:text-lg">
                                 <Link className='flex items-center gap-3' href="/">
                                     <p>Messages</p>
                                     <span className='text-lg'> <BiMessageSquareDetail /></span>
 
                                 </Link>
                             </li>
-                            <li className="text-[#423e3d] font-mono font-semibold text-[17px]">
+                            <li className="text-[#423e3d] font-mono font-semibold xl:text-[14px] 2xl:text-lg">
                                 <Link className='flex items-center gap-3' href="/">
                                     <p>Group</p>
                                     <span className='text-lg'> <ImMakeGroup /></span>
@@ -107,7 +107,7 @@ const Header = () => {
 
 
                 {/* Profile section */}
-                <div className='flex items-center b gap-5'>
+                <div className='md:flex hidden  items-center b gap-5'>
 
                     <div className=''>
                         <button className='text-white  bg-[#d6e8fa49] rounded-full p-[6px]'>

@@ -5,13 +5,13 @@ const Layout = ({ children }) => {
   return (
     <section className="container  mx-auto">
       <div className="lg:grid grid-cols-8 gap-4 mt-20">
-        <div className="shadow-md w-full h-[100vh] col-span-2 p-3 lg:p-0 ">
+        <div className="shadow-md w-full  col-span-2 p-3 lg:p-0 ">
           <div className="sticky top-0">
             {/* User Profile */}
             <div className="text-center   rounded-md shadow-xl border-0">
               <img className="w-28 h-28 lg:w-40 lg:h-40 mx-auto border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
-              <h1 className="text-2xl  font-bold pt-5 lg:text-3xl">Aminul Islam Rakib</h1>
-              <h1 className="text-xl  pt-3 lg:text-xl text-slate-400">Web Developer</h1>
+              <h1 className="text-2xl  font-bold pt-5 lg:text-lg">Aminul Islam Rakib</h1>
+              <h1 className="text-xl  pt-3 lg:text-sm text-slate-400">Web Developer</h1>
 
               <button className="w-3/4 p-3 my-5 bg-slate-200 rounded-3xl text-blue-600 font-semibold border-none">Edit Profile</button>
             </div>
@@ -94,7 +94,7 @@ const Layout = ({ children }) => {
 
           <div className="bg-white p-3  rounded-md shadow-xl border-0">
 
-            <h1 className="font-bold text-center text-blue-600 lg:text-xl">Messages </h1>
+            <h1 className="font-bold text-center text-[#19ccfe] lg:text-xl">Messages </h1>
 
 
             {/* slot-1 */}
