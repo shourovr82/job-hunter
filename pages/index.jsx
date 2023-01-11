@@ -16,10 +16,10 @@ const index = () => {
               <h3 className="text-sm  font-bold text-gray-800">
                 Junior UI/UX Designer
               </h3>
-              <h6 className="text-gray-500 text-lg">Slack Technologies, LLC</h6>
+              <h6 className="text-gray-500 text-sm">Slack Technologies, LLC</h6>
             </div>
           </div>
-          <button className="flex items-center justify-center gap-4 bg-slate-200 py-4 px-8 rounded-2xl text-[#23bfef] hover:text-[#19ccfe] text-xl font-semibold hover:bg-slate-300 duration-300">
+          <button className="flex items-center justify-center gap-4 bg-slate-200 py-2 px-4 rounded-2xl text-[#23bfef] hover:text-[#19ccfe] text-sm font-semibold hover:bg-slate-300 duration-300">
             <span>Save job</span>
             <BsSave2Fill />
           </button>
