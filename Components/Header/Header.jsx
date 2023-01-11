@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { MdEmojiPeople } from 'react-icons/md';
+import { HiUser } from 'react-icons/hi';
 import { IoMdNotifications } from 'react-icons/io';
 import { GoHome } from 'react-icons/go';
 import { MdOutlineWork } from 'react-icons/md';
@@ -116,7 +116,7 @@ const Header = () => {
                     </div>
                     <div className='flex gap-4 items-center '>
                         <button className='text-white  bg-[#d6e8fa49] rounded-full p-[6px]'>
-                            <MdEmojiPeople className='text-2xl text-[#423e3d]' />
+                            <HiUser className='text-2xl rounded-full text-[#423e3d]' />
                         </button>
                         <div>
                             <h2 className='text-[#423e3d] font-mono font-bold text-lg'>Shafinur Islam</h2>

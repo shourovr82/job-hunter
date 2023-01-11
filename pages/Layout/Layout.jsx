@@ -4,7 +4,7 @@ const Layout = ({ children }) => {
 
   return (
     <section className="container  mx-auto">
-      <div className="lg:grid grid-cols-8 gap-4 mt-20">
+      <div className="lg:grid grid-cols-8 gap-4 mt-5">
         <div className="shadow-md w-full  col-span-2 p-3 lg:p-0 ">
           <div className="sticky top-0">
             {/* User Profile */}
