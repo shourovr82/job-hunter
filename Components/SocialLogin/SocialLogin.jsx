@@ -4,7 +4,7 @@ const SocialLogin = () => {
    return (
       <div>
          <div className="flex gap-4 items-center mb-4">
-            <div className="h-[2px] w-full bg-blue-400" /> OR{" "}
+            <div className="h-[2px] w-full bg-blue-400 " /> OR{" "}
             <div className="h-[2px] w-full bg-blue-400" />
          </div>
          <p className="text-center mb-2">Login With</p>
