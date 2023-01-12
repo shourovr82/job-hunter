@@ -71,13 +71,13 @@ const Header = () => {
                     >
                         <ul className="items-center   flex flex-col md:flex-row justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                             <li className="text-[#423e3d]  font-mono font-semibold xl:text-[14px] 2xl:text-lg">
-                                <Link className='flex  px-3 rounded-lg py-2   items-center gap-3' href="/">
+                                <Link className='flex  px-3 rounded-lg py-2   items-center gap-3' href="./HomePage">
                                     <p>Home</p>
                                     <span className='text-lg'><GoHome /></span>
                                 </Link>
                             </li>
                             <li className="text-[#423e3d] w-80 md:w-40 font-mono font-semibold xl:text-[14px] 2xl:text-lg">
-                                <Link className=' flex  justify-center px-3 rounded-lg py-2 nav-menu-title items-center gap-3' href="/jobs">
+                                <Link className=' flex  justify-center px-3 rounded-lg py-2 nav-menu-title items-center gap-3' href="./abc">
                                     <p>Find Work</p>
                                     <span className='text-lg'> <MdOutlineWork /></span>
 
