@@ -83,7 +83,7 @@ const Header = () => {
               <li className="text-[#423e3d] w-80 md:w-40 font-mono font-semibold xl:text-[14px] 2xl:text-lg">
                 <Link
                   className=" flex  justify-center px-3 rounded-lg py-2 nav-menu-title items-center gap-3"
-                  href="./abc"
+                  href="./FindJobs"
                 >
                   <p>Find Work</p>
                   <span className="text-lg">

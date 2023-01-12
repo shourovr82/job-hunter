@@ -1,23 +1,22 @@
 import React from "react";
 
-const CreateSocialPost = () => {
+const CreateJobPosts = () => {
   const handleChange = (event) => {
     event.preventDefault();
     const form = event.target;
     if (form.value.length > 0) {
-        document.getElementById('s-post').classList.remove('btn-disabled');
-    }
-    else{
-        document.getElementById('s-post').classList.add('btn-disabled');
+      document.getElementById("s-post").classList.remove("btn-disabled");
+    } else {
+      document.getElementById("s-post").classList.add("btn-disabled");
     }
   };
   return (
     <section>
-      <input type="checkbox" id="social-post" className="modal-toggle" />
+      <input type="checkbox" id="job-post" className="modal-toggle" />
       <div className="modal">
         <div className="modal-box relative">
           <label
-            htmlFor="social-post"
+            htmlFor="job-post"
             className="btn btn-sm btn-circle absolute right-2 top-2"
           >
             ✕
@@ -31,7 +30,7 @@ const CreateSocialPost = () => {
                 onChange={handleChange}
                 className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none mt-5 mb-5"
                 rows="8"
-                placeholder="What's your mind?"
+                placeholder="Create your job post?"
               ></textarea>
               <button id="s-post" className="btn btn-block btn-disabled">
                 Post
@@ -44,4 +43,4 @@ const CreateSocialPost = () => {
   );
 };
 
-export default CreateSocialPost;
+export default CreateJobPosts;
