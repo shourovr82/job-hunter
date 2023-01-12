@@ -10,7 +10,7 @@ import { ImMakeGroup } from "react-icons/im";
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
   return (
-    <nav className="w-full border-b-[1px] main-navbar shadow-[#3086b827] shadow-md  ">
+    <nav className="bg-white w-full border-b-[1px] main-navbar shadow-[#3086b827] shadow-md  ">
       <div className="justify-between  mx-auto container  md:items-center md:flex ">
         <div>
           <div className="flex items-center justify-between  md:block">
