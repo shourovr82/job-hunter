@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { useForm } from "react-hook-form";
+import SocialLogin from "../Components/SocialLogin/SocialLogin";
 
 const index = () => {
    const {
@@ -16,9 +17,14 @@ const index = () => {
       reset();
    };
    return (
-      <section>
-         <div className="w-[85%] md:w-[50%] xl:w-[30%] mx-auto border border-primary rounded-md p-7 my-16 bg-white shadow-md">
-            <h1 className="text-4xl mb-6 text-center font-bold">Login</h1>
+      <section
+         className="bg-cover bg-no-repeat bg-center min-h-screen flex justify-center lg:justify-end items-center lg:pr-14"
+         style={{ backgroundImage: `url('https://i.ibb.co/LNjjvcL/loginbg.jpg')` }}
+      >
+         <div className="w-[85%] md:w-[50%] xl:w-[40%] p-7 bg-white lg:bg-transparent bg-opacity-80 border border-gray-400 lg:border-none">
+            <h1 className="text-xl md:2xl lg:text-3xl mb-7 text-center font-extrabold">
+               Welcome to Your Professional Account
+            </h1>
             <form onSubmit={handleSubmit(handleLogin)} className="">
                {/* email */}
                <div className="form-control flex flex-col justify-start gap-1 mb-3">
@@ -29,7 +35,7 @@ const index = () => {
                      type="text"
                      name="email"
                      placeholder="user@example.com"
-                     className={`border-2 p-3 rounded-md text-md ${
+                     className={`border-2 p-3 rounded-md text-md bg-transparent border-blue-300 ${
                         errors?.email && "border-red-400"
                      }`}
                      {...register("email", {
@@ -52,7 +58,7 @@ const index = () => {
                      type="password"
                      name="password"
                      placeholder="************"
-                     className={`border-2 p-3 rounded-md text-md ${
+                     className={`border-2 p-3 rounded-md text-md bg-transparent border-blue-300 ${
                         errors?.password && "border-red-400"
                      }`}
                      {...register("password", { required: "Valid password is required" })}
@@ -63,7 +69,7 @@ const index = () => {
                <div className="w-full flex justify-center mt-5">
                   <input
                      type="submit"
-                     className="border rounded-md px-6 py-3 text-md bg-white shadow-md hover:drop-shadow-lg cursor-pointer"
+                     className="w-full rounded-md px-6 py-3 text-md bg-blue-300 shadow-md hover:drop-shadow-lg cursor-pointer"
                      value="Login"
                   />
                </div>
@@ -74,6 +80,7 @@ const index = () => {
                   <span className="text-blue-500">Register</span>
                </Link>
             </p>
+            <SocialLogin />
          </div>
       </section>
    );
