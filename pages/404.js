@@ -7,7 +7,6 @@ export default function Custom404() {
         <br />
         <span>NOT FOUND</span>
       </h1>
-
     </div>
   </>
   );
