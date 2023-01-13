@@ -1,11 +1,12 @@
 import Link from "next/link";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../Components/SocialLogin/SocialLogin";
 import { AuthContext } from "../context/AuthProvider/AuthProvider";
 
-const index = () => {
+const Index = () => {
    const { user, loading, loginAUser } = useContext(AuthContext);
+   const [loginError, setLoginError] = useState("");
    const {
       register,
       handleSubmit,
@@ -19,9 +20,20 @@ const index = () => {
       loginAUser(data.email, data.password)
          .then((result) => {
             console.log(result);
+            reset();
          })
-         .catch((err) => console.log(err));
-      reset();
+         .catch((err) => {
+            const error = err.code.slice(5);
+
+            if (error === "user-not-found") {
+               const errMsg = "User Not Found";
+               setLoginError(errMsg);
+            }
+            if (error === "wrong-password") {
+               const errMsg = "Your password is incorrect";
+               setLoginError(errMsg);
+            }
+         });
    };
    return (
       <section
@@ -75,6 +87,9 @@ const index = () => {
                   <p className="text-red-500">{errors.password?.message}</p>
                </div>
 
+               {loginError && (
+                  <p className="text-red-500 font-bold text-center mb-2">{loginError}</p>
+               )}
                <div className="w-full flex justify-center mt-5">
                   <input
                      type="submit"
@@ -95,4 +110,4 @@ const index = () => {
    );
 };
 
-export default index;
+export default Index;
