@@ -1,20 +1,52 @@
+import axios from "axios";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../Components/SocialLogin/SocialLogin";
+import { AuthContext } from "../context/AuthProvider/AuthProvider";
 
 const Register = () => {
+   const { loader, createAUser, updateAUser } = useContext(AuthContext);
    const {
       register,
       handleSubmit,
+      reset,
       formState: { errors },
    } = useForm();
 
+   const imgHostKey = "f34d3349b34a62a6a86d9cc45b39eafa";
+
    /* handle Register */
-   const handleRegister = (data, event) => {
-      const form = event.target;
-      console.log(data);
-      form.reset();
+   const handleRegister = (data) => {
+      const fullName = data.firstName + " " + data.lastName;
+
+      /* send the uploaded image to the server */
+      const profileImg = data.profilePic[0];
+      const formData = new FormData();
+      formData.append("image", profileImg);
+      axios
+         .post(`https://api.imgbb.com/1/upload?key=${imgHostKey}`, formData)
+         .then((imgResponse) => {
+            const user = {
+               profilePic: imgResponse.data.data.url,
+               name: fullName,
+               email: data.email,
+               role: data.role,
+            };
+
+            /* create user */
+            createAUser(data.email, data.password)
+               .then((result) => {
+                  /* update user */
+                  updateAUser(user.name, user.profilePic)
+                     .then(() => {
+                        reset();
+                     })
+                     .catch((err) => console.log(err));
+               })
+               .catch((err) => console.log(err));
+         })
+         .catch((err) => console.log(err));
    };
    return (
       <section
@@ -26,10 +58,23 @@ const Register = () => {
                Start Your Professional Journey Today
             </h1>
             <form onSubmit={handleSubmit(handleRegister)} className="">
+               {/* Profile Picture */}
+               <div className="w-full flex flex-col justify-start gap-1 mb-3">
+                  <label htmlFor="firstName" className={errors?.profilePic && "text-red-400"}>
+                     Profile Picture <span className="text-red-400">*</span>
+                  </label>
+                  <input
+                     type="file"
+                     className={`${errors.profilePic && "input-error"}`}
+                     {...register("profilePic", { required: "Profile Image is required" })}
+                  />
+                  <p className="text-red-500">{errors.profilePic?.message}</p>
+               </div>
+
                {/* Full Name */}
-               <div className="flex gap-2">
+               <div className="flex flex-col lg:flex-row gap-2">
                   {/* First Name */}
-                  <div className="form-control w-full flex flex-col justify-start gap-1 mb-3">
+                  <div className="w-full flex flex-col justify-start gap-1 mb-3">
                      <label htmlFor="firstName" className={errors?.firstName && "text-red-400"}>
                         First Name <span className="text-red-400">*</span>
                      </label>
@@ -46,7 +91,7 @@ const Register = () => {
                   </div>
 
                   {/* Last Name */}
-                  <div className="form-control w-full flex flex-col justify-start gap-1 mb-3">
+                  <div className="w-full flex flex-col justify-start gap-1 mb-3">
                      <label htmlFor="lastName" className={errors?.lastName && "text-red-400"}>
                         Last Name <span className="text-red-400">*</span>
                      </label>
@@ -64,7 +109,7 @@ const Register = () => {
                </div>
 
                {/* email */}
-               <div className="form-control flex flex-col justify-start gap-1 mb-3">
+               <div className="flex flex-col justify-start gap-1 mb-3">
                   <label htmlFor="email" className={errors?.email && "text-red-400"}>
                      Email <span className="text-red-400">*</span>
                   </label>
@@ -87,7 +132,7 @@ const Register = () => {
                </div>
 
                {/* Password */}
-               <div className="form-control flex flex-col justify-start gap-1 mb-3">
+               <div className="flex flex-col justify-start gap-1 mb-3">
                   <label htmlFor="password" className={errors?.password && "text-red-400"}>
                      Password <span className="text-red-400">*</span>
                   </label>
@@ -104,7 +149,7 @@ const Register = () => {
                </div>
 
                {/* Account Type */}
-               <div className="form-control flex flex-col justify-start gap-1 mb-3">
+               <div className="flex flex-col justify-start gap-1 mb-3">
                   <label htmlFor="role" className={errors?.role && "text-red-400"}>
                      Role <span className="text-red-400">*</span>
                   </label>
