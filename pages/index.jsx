@@ -54,9 +54,8 @@ const Index = () => {
                      type="text"
                      name="email"
                      placeholder="user@example.com"
-                     className={`border-2 p-3 rounded-md text-md bg-transparent border-blue-300 ${
-                        errors?.email && "border-red-400"
-                     }`}
+                     className={`border-2 p-3 rounded-md text-md bg-transparent border-blue-300 ${errors?.email && "border-red-400"
+                        }`}
                      {...register("email", {
                         required: "Valid email is required",
                         pattern: {
@@ -77,9 +76,8 @@ const Index = () => {
                      type="password"
                      name="password"
                      placeholder="************"
-                     className={`border-2 p-3 rounded-md text-md bg-transparent border-blue-300 ${
-                        errors?.password && "border-red-400"
-                     }`}
+                     className={`border-2 p-3 rounded-md text-md bg-transparent border-blue-300 ${errors?.password && "border-red-400"
+                        }`}
                      {...register("password", {
                         required: "Valid password is required",
                      })}
