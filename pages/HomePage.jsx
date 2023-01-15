@@ -41,6 +41,7 @@ const HomePage = () => {
             </a>
           </div>
         </div>
+
         <CreateSocialPost />
         <div className="bg-white shadow w-full rounded p-10">
           <div className="flex items-center justify-between">

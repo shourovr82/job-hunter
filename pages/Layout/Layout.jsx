@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     <section className="container  mx-auto">
       <div className="lg:grid grid-cols-8 gap-4 mt-5">
         <div className=" w-full  col-span-2 p-3 lg:p-0 ">
-          <div className="sticky top-0">
+          <div className="sticky top-10">
             {/* User Profile */}
             <div className=" bg-white text-center rounded-md shadow-xl border-0">
               <img className="w-28 h-28 lg:w-40 lg:h-40 mx-auto border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
@@ -92,7 +92,7 @@ const Layout = ({ children }) => {
 
         <div className="w-full col-span-2  ">
 
-          <div className="bg-white p-3  rounded-md shadow-xl border-0">
+          <div className="bg-white p-3   sticky top-10 rounded-md shadow-xl border-0">
 
             <h1 className="font-bold text-center text-[#19ccfe] lg:text-xl">Messages </h1>
 
