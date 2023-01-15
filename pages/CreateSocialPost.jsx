@@ -5,10 +5,10 @@ const CreateSocialPost = () => {
     event.preventDefault();
     const form = event.target;
     if (form.value.length > 0) {
-        document.getElementById('s-post').classList.remove('btn-disabled');
+      document.getElementById('s-post').classList.remove('btn-disabled');
     }
-    else{
-        document.getElementById('s-post').classList.add('btn-disabled');
+    else {
+      document.getElementById('s-post').classList.add('btn-disabled');
     }
   };
   return (
