@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
         <div className=" w-full  col-span-2 p-3 lg:p-0 ">
           <div className="sticky top-10">
             {/* User Profile */}
-            <div className=" bg-white text-center rounded-md shadow-xl border-0">
+            <div className="bg-white text-center rounded-md shadow-xl border-0">
               <img className="w-28 h-28 lg:w-40 lg:h-40 mx-auto border-green-600 rounded-full" src="https://i.ibb.co/QYjRJmD/avator.jpg" alt="Profile Picture" />
               <h1 className="text-2xl  font-bold pt-5 lg:text-lg">Aminul Islam Rakib</h1>
               <h1 className="text-xl  pt-3 lg:text-sm text-slate-400">Web Developer</h1>

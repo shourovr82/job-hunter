@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-   apiKey: "AIzaSyAuKMPCC7vNjhnojW2OnCeBnnO3Ilc-Sts",
-   authDomain: "job-khojo.firebaseapp.com",
-   projectId: "job-khojo",
-   storageBucket: "job-khojo.appspot.com",
-   messagingSenderId: "765893264976",
-   appId: "1:765893264976:web:28b0eb6ec02c64b1bf7355",
+  apiKey: process.env.NEXT_PUBLIC_Firebase_APIKEY,
+  authDomain: process.env.NEXT_PUBLIC_Firebase_AUTHDOMAIN,
+  projectId: process.env.NEXT_PUBLIC_Firebase_PROJECTID,
+  storageBucket: process.env.NEXT_PUBLIC_Firebase_STORAGEBUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_Firebase_MESSAGINGSENDERID,
+  appId: process.env.NEXT_PUBLIC_Firebase_APPID,
 };
 const app = initializeApp(firebaseConfig);
 
